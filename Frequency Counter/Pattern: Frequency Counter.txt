@@ -1,0 +1,14 @@
+let a = {}
+let b = {}
+
+function whatever() {
+    for (v of a) {
+        a[v] = (a[v] || 0) + 1;
+    }
+    for (v of b) {
+        b[v] = (b[v] || 0) + 1;
+    }
+}
+
+This builds for us two objects which contain each element, 
+along with a tally of the occurences
