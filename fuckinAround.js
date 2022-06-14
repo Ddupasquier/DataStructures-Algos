@@ -6,10 +6,10 @@ const list1 = [
   ['5', 'user_3', 'resource_1'],
   ['1', 'user_2', 'resource_1'],
   ['1', 'user_1', 'resource_1'],
-  ['2', 'user_2', 'resource_1']
- ]
- 
- /*
+  ['2', 'user_2', 'resource_1'],
+];
+
+/*
  obj = {}
  
  for (loop) {
@@ -28,24 +28,23 @@ const list1 = [
  return obj;
  
  */
- 
- const userTimes = (list) => {
+
+const userTimes = (list) => {
   const userHash = {};
-  
+
   for (let i = 0; i < list.length; i++) {
-    const time = list[i][0]
-    const user = list[i][1]
-    
+    const time = list[i][0];
+    const user = list[i][1];
+
     if (!userHash[user]) {
-      userHash[user] = [parseInt(time), parseInt(time)]
+      userHash[user] = [parseInt(time), parseInt(time)];
     } else if (parseInt(time) < userHash[user][0]) {
-      userHash[user][0] = parseInt(time)
+      userHash[user][0] = parseInt(time);
     } else if (parseInt(time) > userHash[user][1]) {
-      userHash[user][1] = parseInt(time)
+      userHash[user][1] = parseInt(time);
     }
-    
   }
   return userHash;
- }
- 
- console.log(userTimes(list1))
+};
+
+console.log(userTimes(list1));

@@ -1,9 +1,0 @@
-for/of works well for stings
-
-
-for/in works well for objects and arrays
-EX: for (let key in fc1) {
-    if (fc1[key] !== fc2[key] || Object.keys(fc1).length !== Object.keys(fc2).length) {
-      return false;
-    }
-  }

@@ -22,5 +22,5 @@ seasons.addToHead('summer');
 seasons.addToHead('spring');
 seasons.printList();
 
-seasons.removeWinter()
-seasons.printList()
+seasons.removeWinter();
+seasons.printList();

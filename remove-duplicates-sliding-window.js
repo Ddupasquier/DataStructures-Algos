@@ -5,7 +5,7 @@ const removeDuplicates = function (nums) {
       nums.splice(j, 1);
     }
   }
-  return nums
+  return nums;
 };
 
 console.log(removeDuplicates([1, 1, 1, 2, 2, 3, 4, 4, 4, 5, 5, 6]));

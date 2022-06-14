@@ -18,8 +18,6 @@
 
 // ex3 ~O~O~O~OP~O~OO~ has 2 deaf rats
 
-
-
 var countDeafRats = function (town) {
   const newStr = town.split(' ').join('').split('P');
   return count(newStr[0], 'left') + count(newStr[1], 'right');

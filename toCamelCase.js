@@ -2,7 +2,7 @@ function toCamelCase(str) {
   if (str.length <= 1) {
     return str;
   }
-  let newStr = "";
+  let newStr = '';
   for (let i = 0; i < str.length; i++) {
     if (str[i] === '-' || str[i] === '_') {
       //       * if value of i is hyphen or underscore

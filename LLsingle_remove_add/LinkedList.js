@@ -51,13 +51,13 @@ class LinkedList {
     let prevNode = null;
     while (this.next !== null) {
       if (currentNode.data === 'winter') {
-        prevNode.next = currentNode.next
-        return
+        prevNode.next = currentNode.next;
+        return;
       } else {
         prevNode = currentNode;
-        currentNode = currentNode.next
+        currentNode = currentNode.next;
         // currentNode = currentNode.getNextNode()
-        }
+      }
     }
   }
 }

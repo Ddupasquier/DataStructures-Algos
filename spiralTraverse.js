@@ -20,17 +20,17 @@ function spiralTraverse(arr) {
       fullArr.push(arr[i][endCol]);
     }
     for (let i = endCol - 1; i >= startCol; i--) {
-      if (startRow === endRow) break
-      fullArr.push(arr[endRow][i])
+      if (startRow === endRow) break;
+      fullArr.push(arr[endRow][i]);
     }
-    for (let i = endRow -1; i > startRow; i--) {
-      if (startCol === endCol) break
-      fullArr.push(arr[i][startCol])
+    for (let i = endRow - 1; i > startRow; i--) {
+      if (startCol === endCol) break;
+      fullArr.push(arr[i][startCol]);
     }
-    startRow++
-    endRow--
-    startCol++
-    endCol--
+    startRow++;
+    endRow--;
+    startCol++;
+    endCol--;
   }
   return fullArr;
 }

@@ -17,7 +17,7 @@ function missingNo(nums) {
       i++;
       j++;
     }
-    if (sortNums[nums.length-1] !== 100) {
+    if (sortNums[nums.length - 1] !== 100) {
       return 100;
     }
   }

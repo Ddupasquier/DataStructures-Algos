@@ -11,10 +11,13 @@
 // 1, 5, 3
 
 function isNarcissistic(n) {
-  const arrOfN = n.toString().split('').map((n) => {
-    return Number(n);
-  });;
-  const l = arrOfN.length
+  const arrOfN = n
+    .toString()
+    .split('')
+    .map((n) => {
+      return Number(n);
+    });
+  const l = arrOfN.length;
   let i = 0;
   let product = 0;
   while (i < l) {

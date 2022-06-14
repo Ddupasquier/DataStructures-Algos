@@ -18,7 +18,7 @@ var maxSubArray = function (nums) {
     }
     if (sum > max) max = sum;
   }
-    return max;
+  return max;
 };
 
 console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
