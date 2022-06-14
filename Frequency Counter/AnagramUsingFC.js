@@ -42,10 +42,8 @@ function anagram(a, b) {
 
   for (let i = 0; i < a.length; i++) {
     let letter = a[i];
-    // using a ternary to check if index is currently in "lookup" object
-    lookup[letter] ? (lookup[letter] += 1) : (lookup[letter] = 1);
+    lookup[letter] = (lookup[letter] || 0) + 1
   }
-  console.log(lookup);
 
   for (let i = 0; i < b.length; i++) {
     let letter = b[i];
@@ -62,3 +60,4 @@ console.log(anagram('mom', 'mom'));
 console.log(anagram('mom', 'moo'));
 console.log(anagram('mom', 'mmo'));
 console.log(anagram('moo', 'moon'));
+console.log(anagram('moon', 'monn'));
