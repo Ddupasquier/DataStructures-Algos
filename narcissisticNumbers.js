@@ -6,6 +6,9 @@
 // 1**3 + 5**3 + 3**3 = 153
 
 // Write a function that, given n, returns whether or not n is a Narcissistic Number.
+// 153
+// "1", "5", "3"
+// 1, 5, 3
 
 function isNarcissistic(n) {
   const arrOfN = n.toString().split('').map((n) => {
