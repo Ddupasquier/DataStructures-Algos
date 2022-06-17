@@ -11,9 +11,8 @@ function alphanumeric(string) {
   return true;
 }
 
-
-console.log(alphanumeric("Mazinkaiser"))
-console.log(alphanumeric("hello world_"))
-console.log(alphanumeric("PassW0rd"))
-console.log(alphanumeric("     "))
-console.log(alphanumeric(""))
+console.log(alphanumeric('Mazinkaiser'));
+console.log(alphanumeric('hello world_'));
+console.log(alphanumeric('PassW0rd'));
+console.log(alphanumeric('     '));
+console.log(alphanumeric(''));
