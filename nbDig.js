@@ -18,19 +18,29 @@
 // Note that 121 has twice the digit 1.
 
 function nbDig(n, d) {
-  let count = n;
-  let returnCount = 0;
-  let nums = [];
+  // * REFACTOR
+  let count = n, returnCount = 0, nums = '';
   while (count > 0) {
-    nums.push(String(count ** 2));
+    nums += String(count ** 2);
     count -= 1;
   }
-  for (let i of nums) {
-    if (i.includes(d)) {
+  for (let num of nums) {
+    if (num === '1') {
       returnCount++;
     }
   }
   return returnCount;
 }
 
-console.log(nbDig(40, 2));
+//   let count = n;
+//   let returnCount = 0;
+//   while (count > 0) {
+//     const num = String(count ** 2);
+//     if (num.includes(d)) {
+//       returnCount++;
+//     }
+//     count--;
+//   }
+//   return returnCount;
+
+console.log(nbDig(10, 1));
