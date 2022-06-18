@@ -19,12 +19,13 @@
 
 function nbDig(n, d) {
   // * REFACTOR
-  let count = n, returnCount = 0, nums = '';
+  let count = n, returnCount = 0, nums = [];
   while (count > 0) {
-    nums += String(count ** 2);
+    nums.push(String(count ** 2));
     count -= 1;
   }
-  for (let num of nums) {
+  const joined = nums.join('')
+  for (let num of joined) {
     if (num === '1') {
       returnCount++;
     }
