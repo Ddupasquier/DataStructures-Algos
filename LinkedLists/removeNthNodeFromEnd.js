@@ -17,13 +17,21 @@ list and return its head. */
 var removeNthFromEnd = function (head, n) {
   let right = head,
     left = head;
-  for (let i = 0; i < n; i++) right = right.next;
+
+  for (let i = 0; i < n; i++) {
+    right = right.next;
+  }
+
   if (!right) return head.next;
-  while (right.next) (right = right.next), (left = left.next);
+
+  while (right.next) {
+    right = right.next;
+    left = left.next;
+  }
+  
   left.next = left.next.next;
   return head;
 };
-
 
 /* 
 Using fast point / slow pointer 
