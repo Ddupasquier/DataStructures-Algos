@@ -26,12 +26,14 @@ function nbDig(n, d) {
   }
   const joined = nums.join('')
   for (let num of joined) {
-    if (num === '1') {
+    if (num === String(d)) {
       returnCount++;
     }
   }
   return returnCount;
 }
+
+console.log(nbDig(10, 1));
 
 //   let count = n;
 //   let returnCount = 0;
@@ -43,5 +45,3 @@ function nbDig(n, d) {
 //     count--;
 //   }
 //   return returnCount;
-
-console.log(nbDig(10, 1));
