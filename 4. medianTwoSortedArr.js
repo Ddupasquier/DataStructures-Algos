@@ -1,16 +1,17 @@
 function findMedianSortedArrays(nums1, nums2) {
   // * MY SOLUTION WHICH PASSES ALL TEST CASES
+  // ! Try to do this using shift and push rather than concatenation
   nums1 = [...nums1, ...nums2].sort((a, b) => a - b);
   if (nums1.length % 2 === 0) {
     let i = 0;
     let j = nums1.length - 1;
-    let evenMids = [];
-    while (i < j) {
+    let evenMids
+    while (j < nums1.length) {
       i++;
-      j--;
-      evenMids = [nums1[i], nums1[j]];
+      j += 2;
+	evenMids = (nums1[i] + nums1[i+1]) / 2
     }
-    return (evenMids[0] + evenMids[1]) / 2;
+    return evenMids
   } else {
     let oddMid = (nums1.length - 1) / 2;
     return nums1[oddMid];
