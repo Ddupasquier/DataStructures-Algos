@@ -1,3 +1,14 @@
+// DEPTH FIRST AND BREADTH FIRST SYNTAX IS ALMOST IDENTICAL
+// * THE REAL DIFFERENT IS THE BREADTH FIRST WORKS BEST WITH A QUEUE (.SHIFT())
+// ! AND DEPTH FIRST WORKS BEST WITH A STACK (.POP())
+
+/*
+
+Breadth first also doesn't work well with recursion due to the nature of a queue
+Utilizing recursion in a depth first traversal is much more efficient
+
+*/ 
+
 class Node {
   constructor(val) {
     this.val = val;
