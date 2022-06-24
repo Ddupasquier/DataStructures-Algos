@@ -1,0 +1,45 @@
+Before quicksort: [ 15, 28, 5, 12, 27 ]
+. Calling partition [ 15, 28, 5, 12, 27 ] with leftBound 0 and rightBound 4
+.. Partitioning with pivot 5 leftIndex 0 rightIndex 4
+.. 27 > 5 : Decremented rightIndex => 3
+.. 12 > 5 : Decremented rightIndex => 2
+.. 0 <= 2 : Swapped leftIndex 0 with rightIndex 2 [ 5, 28, 15, 12, 27 ]
+......... : Incremented leftIndex => 1 Decremented rightIndex => 1
+.. 28 > 5 : Decremented rightIndex => 0
+. Returning pivotIndex = 1
+
+Calling quicksort for left partition with leftBound 0 and (pivotIndex-1) 0
+
+Calling quicksort for right partition with pivotIndex 1 and rightBound 4
+. Calling partition [ 5, 28, 15, 12, 27 ] with leftBound 1 and rightBound 4
+.. Partitioning with pivot 15 leftIndex 1 rightIndex 4
+.. 27 > 15 : Decremented rightIndex => 3
+.. 1 <= 3 : Swapped leftIndex 1 with rightIndex 3 [ 5, 12, 15, 28, 27 ]
+......... : Incremented leftIndex => 2 Decremented rightIndex => 2
+.. 2 <= 2 : Swapped leftIndex 2 with rightIndex 2 [ 5, 12, 15, 28, 27 ]
+......... : Incremented leftIndex => 3 Decremented rightIndex => 1
+. Returning pivotIndex = 3
+
+Calling quicksort for left partition with leftBound 1 and (pivotIndex-1) 2
+. Calling partition [ 5, 12, 15, 28, 27 ] with leftBound 1 and rightBound 2
+.. Partitioning with pivot 12 leftIndex 1 rightIndex 2
+.. 15 > 12 : Decremented rightIndex => 1
+.. 1 <= 1 : Swapped leftIndex 1 with rightIndex 1 [ 5, 12, 15, 28, 27 ]
+......... : Incremented leftIndex => 2 Decremented rightIndex => 0
+. Returning pivotIndex = 2
+
+Calling quicksort for left partition with leftBound 1 and (pivotIndex-1) 1
+
+Calling quicksort for right partition with pivotIndex 2 and rightBound 2
+
+Calling quicksort for right partition with pivotIndex 3 and rightBound 4
+. Calling partition [ 5, 12, 15, 28, 27 ] with leftBound 3 and rightBound 4
+.. Partitioning with pivot 28 leftIndex 3 rightIndex 4
+.. 3 <= 4 : Swapped leftIndex 3 with rightIndex 4 [ 5, 12, 15, 27, 28 ]
+......... : Incremented leftIndex => 4 Decremented rightIndex => 3
+. Returning pivotIndex = 4
+
+Calling quicksort for left partition with leftBound 3 and (pivotIndex-1) 3
+
+Calling quicksort for right partition with pivotIndex 4 and rightBound 4
+After  quicksort: [ 5, 12, 15, 27, 28 ]
