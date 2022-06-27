@@ -9,38 +9,66 @@ Complete the solution so that it takes a list of integers in increasing order an
 */
 
 function solution(list) {
-  list.sort((a, b) => a - b);
+  const output = [];
+  let concurrent = [];
   let i = 0;
-  let j = 1;
-  let count = 1
-  let newList = [];
-  while (j < list.length) {
-    const current = list[i];
-    //     if i + 1 is not equal to j then we'll push both elements to the array
-    if (current + count !== list[j]) {
-      if (j - i >= 2) {
-        newList.push(current + '-' + list[j]);
-        i = j + 1;
-        j = i + 1;
-      } else {
-        newList.push(current);
-        i++;
-        j = i + 1;
-      }
+
+  while (i <= list.length) {
+    if (i === 0 || list[i] === list[i - 1] + 1) {
+      concurrent.push(list[i]);
     } else {
-      j++;
-      // insert a while loop so we can keep incrementing j if range is more than 3
+      if (concurrent.length > 2) {
+        output.push(`${concurrent[0]}-${concurrent[concurrent.length - 1]}`);
+      } else {
+        output.push(concurrent.join(','));
+      }
+      concurrent = [];
+      concurrent.push(list[i]);
     }
+    i++;
   }
-  return newList.join('');
+  return output.join(',');
 }
 
 console.log(
   solution([
-    -10, -9, -8, -6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18,
-    19, 20,
+    5, 7, 4, 5, 6, -9, 2, -2, -3, -1, 0, 5, 4, 3
   ])
 );
+
+// function solution(list) {
+//   list.sort((a, b) => a - b);
+//   let i = 0;
+//   let j = 1;
+//   let count = 1
+//   let newList = [];
+//   while (j < list.length) {
+//     const current = list[i];
+//     //     if i + 1 is not equal to j then we'll push both elements to the array
+//     if (current + count !== list[j]) {
+//       if (j - i >= 2) {
+//         newList.push(current + '-' + list[j]);
+//         i = j + 1;
+//         j = i + 1;
+//       } else {
+//         newList.push(current);
+//         i++;
+//         j = i + 1;
+//       }
+//     } else {
+//       j++;
+//       // insert a while loop so we can keep incrementing j if range is more than 3
+//     }
+//   }
+//   return newList.join('');
+// }
+
+// console.log(
+//   solution([
+//     -10, -9, -8, -6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18,
+//     19, 20,
+//   ])
+// );
 //   // TODO: complete solution
 //   //list is an array of integers
 //   let start,
