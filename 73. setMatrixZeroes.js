@@ -4,6 +4,7 @@ const setZeroes = (matrix) => {
     for (const y in matrix[x]) {
       if (matrix[x][y] === 0) {
         zeroes.add([x, y]);
+        console.log(zeroes)
       }
     }
   }
