@@ -7,7 +7,6 @@ const threeSum = (nums) => {
     let left = lead + 1,
       right = nums.length - 1;
     if (lead > 0 && nums[lead - 1] === nums[lead]) continue;
-    if (lead > 0 && nums[lead - 1] === nums[lead]) continue;
     while (left < right) {
       const total = nums[lead] + nums[left] + nums[right];
       if (total === 0) {
@@ -29,6 +28,10 @@ const threeSum = (nums) => {
   return result;
 };
 
+
+// const threeSum = (nums) => {
+
+// }
 
 console.log(threeSum([-1, 0, 1, 2, -1, -4]));
 console.log(threeSum([0, 0, 0, 0]));
