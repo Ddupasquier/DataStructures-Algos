@@ -30,11 +30,7 @@ function solution(list) {
   return output.join(',');
 }
 
-console.log(
-  solution([
-    5, 7, 4, 5, 6, -9, 2, -2, -3, -1, 0, 5, 4, 3
-  ])
-);
+console.log(solution([5, 7, 4, 5, 6, -9, 2, -2, -3, -1, 0, 5, 4, 3]));
 
 // function solution(list) {
 //   list.sort((a, b) => a - b);
