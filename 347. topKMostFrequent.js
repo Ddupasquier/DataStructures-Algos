@@ -3,6 +3,7 @@ var topKFrequent = function (nums, k) {
   let result = [];
   for (const num of nums) hash[num] = (hash[num] || 0) + 1;
   const mapped = Object.entries(hash).sort((a, b) => a[1] - b[1]);
+  console.log(hash, mapped)
 
   while (result.length < k) {
     let largest = mapped.pop();
