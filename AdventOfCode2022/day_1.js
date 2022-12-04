@@ -1,5 +1,5 @@
 import fs from 'fs';
-const input = fs.readFileSync('input.txt', 'utf-8').split(`\n`);
+const input = fs.readFileSync('day_1_input.txt', 'utf-8').split(`\n`);
 
 let elfCount = 0;
 let elfCalories = [0];
